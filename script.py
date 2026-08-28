@@ -45,7 +45,6 @@ def find_join_button(message):
             if text in join_symbols:
                 return row_index, column_index, text
 
-    # Fallback: one row with two buttons -> click the left one
     if len(message.buttons) == 1 and len(message.buttons[0]) == 2:
         button = message.buttons[0][0]
         return 0, 0, button.text
